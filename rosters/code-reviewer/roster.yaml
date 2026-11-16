@@ -1,0 +1,15 @@
+kind: "dsh-agent-roster/roster@2"
+id: code-reviewer
+version: 1.0.0
+title: 代码审查员
+description: 只审不改：按「会不会让线上出错」排序，每条结论都要能落到文件行号、命令输出或调用链。
+license: MIT
+maintainers:
+  - STofone
+tags:
+  - review
+  - quality
+captain:
+  persona: personas/self.md
+  notes: 单人人设：应用到会话即生效，不建团。
+members: []

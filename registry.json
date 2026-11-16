@@ -1,0 +1,28 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dsh-agent-roster/dsh-agent-roster/main/schema/registry.v1.schema.json",
+  "kind": "dsh-agent-roster-registry/v1",
+  "version": 1,
+  "generatedAt": "2026-11-16T06:20:00.000Z",
+  "generator": "dsh-agent-roster/personas (hand-maintained)",
+  "source": "https://github.com/dsh-agent-roster/personas",
+  "collections": [
+    {
+      "id": "personas",
+      "title": "单人人设（应用到一个会话）",
+      "description": "三份单人人设：代码审查、架构评审、故障排查。没有成员，只带 captain.persona；应用到一个会话即可，不建团。需要插件 >= 1.33.0。",
+      "repo": "github:dsh-agent-roster/personas",
+      "ref": "main",
+      "path": "",
+      "rosters": ["code-reviewer", "architect", "debugger"],
+      "tags": ["persona", "review", "architecture", "debugging"],
+      "license": "MIT",
+      "maintainers": ["STofone"],
+      "homepage": "https://github.com/dsh-agent-roster/personas",
+      "files": {
+        "code-reviewer": "dist/code-reviewer-1.0.0.json",
+        "architect": "dist/architect-1.0.0.json",
+        "debugger": "dist/debugger-1.0.0.json"
+      }
+    }
+  ]
+}

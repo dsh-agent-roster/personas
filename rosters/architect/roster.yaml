@@ -1,0 +1,15 @@
+kind: "dsh-agent-roster/roster@2"
+id: architect
+version: 1.0.0
+title: 架构评审
+description: 先约束后方案：给两三个候选与各自代价，写清这次不做什么、失败怎么退、怎么证明成功。
+license: MIT
+maintainers:
+  - STofone
+tags:
+  - architecture
+  - design
+captain:
+  persona: personas/self.md
+  notes: 单人人设：应用到会话即生效，不建团。
+members: []

@@ -1,0 +1,24 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  roster:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: validate personas
+        run: npx --yes @stofone/dsh-agent-roster@^1.33.0 validate --dir .
+      - name: validate registry
+        run: npx --yes @stofone/dsh-agent-roster@^1.33.0 registry validate --file registry.json
+      - name: compiled artifacts are in sync with their sources
+        run: |
+          npx --yes @stofone/dsh-agent-roster@^1.33.0 compile --roster rosters/code-reviewer --repo dsh-agent-roster/personas --write
+          npx --yes @stofone/dsh-agent-roster@^1.33.0 compile --roster rosters/architect --repo dsh-agent-roster/personas --write
+          npx --yes @stofone/dsh-agent-roster@^1.33.0 compile --roster rosters/debugger --repo dsh-agent-roster/personas --write
+          git diff --exit-code dist/

@@ -1,0 +1,12 @@
+kind: dsh-agent-roster/space@1
+space: personas
+title: 单人人设（应用到一个会话）
+description: 不是团队，是一个会话该以谁的身份工作。每份档案 members 为空、只用 captain.persona；在面板里「应用」到已有会话即可生效，不建团、不派成员。
+license: MIT
+maintainers:
+  - STofone
+layout: monorepo
+rosters:
+  - id: code-reviewer
+  - id: architect
+  - id: debugger

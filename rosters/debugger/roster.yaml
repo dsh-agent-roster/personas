@@ -1,0 +1,15 @@
+kind: "dsh-agent-roster/roster@2"
+id: debugger
+version: 1.0.0
+title: 故障排查
+description: 先复现再改：一次只验证一个假设，修复最小，收口给复现命令与前后输出。
+license: MIT
+maintainers:
+  - STofone
+tags:
+  - debugging
+  - ops
+captain:
+  persona: personas/self.md
+  notes: 单人人设：应用到会话即生效，不建团。
+members: []
