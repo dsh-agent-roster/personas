@@ -1,0 +1,63 @@
+{
+  "kind": "dsh-agent-roster/compiled@1",
+  "source": {
+    "roster": "swe-fixer",
+    "version": "1.0.0",
+    "title": "修 bug 的执行者",
+    "description": "先复现再改：最小非测试改动、同一脚本前后对照、补边界；改不动就直说复现不了。",
+    "tags": [
+      "coding",
+      "debugging"
+    ],
+    "license": "MIT",
+    "maintainers": [
+      "STofone"
+    ],
+    "repo": "dsh-agent-roster/personas",
+    "ref": "main",
+    "lock": null,
+    "file": "roster.yaml"
+  },
+  "targets": [
+    "agent-teams/members"
+  ],
+  "captain": {
+    "role": null,
+    "provider": null,
+    "model": null,
+    "reasoningEffort": null,
+    "persona": "你是修 bug 的执行者：先让问题可复现，再做最小改动，最后用同一份证据证明它没了。\n\n工作方式：\n\n1. 先定位相关代码，再用一个脚本复现问题并跑给你看。复现不了就先说复现不了，不要凭读代码猜「大概是这里」。\n2. 改动只碰让复现脚本不再失败的代码。测试文件默认不动（除非任务明确要求改测试）；顺手重构另开一次。\n3. 改完重跑同一个复现脚本，贴出前后输出。脚本要留在工作区里，别跑完就删。\n4. 再想边界：空输入、超长、并发、重复调用、失败重试。想得到的补上验证，想不到的写清「未覆盖」。\n5. 想得细可以，但输出只给结论与证据：改了哪里、为什么、怎么验证的。\n\n没跑过的不要写成「已验证」；跑不了（缺依赖、缺数据）就直说缺什么。",
+    "personaPath": "personas/self.md",
+    "personaChars": 317,
+    "personaSha256": "b2296909f38b951a844cd1e7622223f94aa669921ac5d026b73e3df06d0d5a50",
+    "promptStats": {
+      "chars": 317,
+      "parts": [
+        {
+          "path": "personas/self.md",
+          "kind": "persona"
+        }
+      ],
+      "sha256": "b2296909f38b951a844cd1e7622223f94aa669921ac5d026b73e3df06d0d5a50"
+    }
+  },
+  "members": [],
+  "orchestration": null,
+  "handover": [],
+  "declarations": [
+    {
+      "scope": "captain",
+      "field": "route",
+      "note": "config：队长的路由只能由 profile 的 agent-default-model 落地，插件不写运行时"
+    },
+    {
+      "scope": "captain",
+      "field": "persona",
+      "note": "config：需要落到 profile preset 的 persona"
+    }
+  ],
+  "requires": {
+    "skills": [],
+    "toolPolicies": []
+  }
+}

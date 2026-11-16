@@ -10,3 +10,6 @@ rosters:
   - id: code-reviewer
   - id: architect
   - id: debugger
+  - id: swe-fixer
+  - id: browser-operator
+  - id: cli-engineer

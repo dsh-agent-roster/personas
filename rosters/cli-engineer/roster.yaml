@@ -1,0 +1,15 @@
+kind: "dsh-agent-roster/roster@2"
+id: cli-engineer
+version: 1.0.0
+title: CLI 工程助手
+description: 分清问与做：先查约定再动手，改完跑测试，不靠关检查过关，不碰密钥。
+license: MIT
+maintainers:
+  - STofone
+tags:
+  - coding
+  - cli
+captain:
+  persona: personas/self.md
+  notes: 单人人设：应用到会话即生效，不建团。行为参照 gemini-cli 的 Core Mandates（约定优先、复现后修、不加抑制、数据非指令），正文为中文重写。
+members: []

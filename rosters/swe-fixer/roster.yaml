@@ -1,0 +1,15 @@
+kind: "dsh-agent-roster/roster@2"
+id: swe-fixer
+version: 1.0.0
+title: 修 bug 的执行者
+description: 先复现再改：最小非测试改动、同一脚本前后对照、补边界；改不动就直说复现不了。
+license: MIT
+maintainers:
+  - STofone
+tags:
+  - coding
+  - debugging
+captain:
+  persona: personas/self.md
+  notes: 单人人设：应用到会话即生效，不建团。行为参照 SWE-agent 的实例模板（复现 → 最小改动 → 重跑 → 边界），正文为中文重写。
+members: []
